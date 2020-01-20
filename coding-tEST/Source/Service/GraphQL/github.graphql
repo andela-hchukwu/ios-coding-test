@@ -1,0 +1,35 @@
+query GetUserQL {
+    user(login: "andela-hchukwu") {
+        name
+        email
+    }
+}
+
+query GetLatestCommits {
+repository(name: "rails", owner: "rails") {
+  ref(qualifiedName: "master") {
+    target {
+      ... on Commit {
+        id
+        history(first: 25) {
+          pageInfo {
+            hasNextPage
+          }
+          edges {
+            node {
+              messageHeadline
+              oid
+              message
+              author {
+                name
+                email
+                date
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}
