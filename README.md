@@ -28,3 +28,6 @@ Please **fork** this repository and commit all your changes to it. When you're d
 ## Constraints
 - After I pushed to github my github acces token credentials were revoked because it was meant to be private so a 401 was returned.
 - My tableview need to return a dynamic height this was not done due to time constraint.
+
+## Enhancement
+- An authentication page can be created to authenticate each user so a personalized token created to access the github api.

@@ -20,7 +20,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-        MyGitHub.shared.getGithubUser()
+        tableView.estimatedRowHeight = 150
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
+//        MyGitHub.shared.getGithubUser()
         MyGitHub.shared.getLatestCommits { commits in
             if commits.count == 0 {
                 self.tableView.isHidden = true
@@ -31,6 +34,10 @@ class ViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func showAlert() {
+        
     }
 }
 
@@ -49,6 +56,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.commitMessageLabel.text = commit.commitMessage
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
     
