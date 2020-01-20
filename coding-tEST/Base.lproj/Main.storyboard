@@ -15,6 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An internal error occured!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ue-GX-Y4t">
+                                <rect key="frame" x="109" y="437.5" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KZV-wH-Tqz">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -68,12 +74,15 @@
                         <constraints>
                             <constraint firstItem="KZV-wH-Tqz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UIC-Nq-7HA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KZV-wH-Tqz" secondAttribute="bottom" id="bNq-qQ-ZWh"/>
+                            <constraint firstItem="1Ue-GX-Y4t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="igl-L1-rfd"/>
+                            <constraint firstItem="1Ue-GX-Y4t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rvk-7g-4L2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KZV-wH-Tqz" secondAttribute="trailing" id="smJ-Wa-aE8"/>
                             <constraint firstItem="KZV-wH-Tqz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zZA-bv-Mcb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="1Ue-GX-Y4t" id="k7l-nr-1aV"/>
                         <outlet property="tableView" destination="KZV-wH-Tqz" id="kCK-Ds-pX7"/>
                     </connections>
                 </viewController>

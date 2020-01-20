@@ -28,6 +28,8 @@ class MyGitHub {
         return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, session: URLSession(configuration: configuration)))
     }()
     
+    var commitByAuthor = [CommitsByAuthor]()
+    
     func getGithubUser() {
         
         let getUserQL = GetUserQlQuery()
@@ -50,14 +52,24 @@ class MyGitHub {
             
             switch result {
             case .success(let graphQLResult):
-                print(graphQLResult.data)
+                self.commitByAuthor = []
+                if let newCommits = graphQLResult.data?.repository?.ref?.target.asCommit?.history.edges {
+                    for cm in newCommits {
+                        let authorCommit = cm.flatMap { commit in
+                            self.createAlerts(commit: commit)
+                        }
+                        self.commitByAuthor.append(authorCommit!)
+                    }
+                    completion(self.commitByAuthor)
+                }
             case .failure(let error):
                 print(error)
+                completion(self.commitByAuthor)
             }
         }
     }
     
-    func createAlerts(commit: GetLatestCommitsQuery.Data.Repository.Ref.Target.AsCommit) /*-> CommitsByAuthor?*/ {
-//        return CommitsByAuthor(username: commit., commitNumber: <#T##String#>, commitMessage: <#T##String#>)
+    func createAlerts(commit: GetLatestCommitsQuery.Data.Repository.Ref.Target.AsCommit.History.Edge) -> CommitsByAuthor? {
+        return CommitsByAuthor(username: commit.node?.author?.name ?? "N/A", commitNumber: commit.node!.oid, commitMessage: commit.node!.message)
     }
 }

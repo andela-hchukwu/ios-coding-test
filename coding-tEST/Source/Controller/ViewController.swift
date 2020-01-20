@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var commits = [CommitsByAuthor]()
 
@@ -21,8 +22,14 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         MyGitHub.shared.getGithubUser()
         MyGitHub.shared.getLatestCommits { commits in
-            self.commits = commits
-            self.tableView.reloadData()
+            if commits.count == 0 {
+                self.tableView.isHidden = true
+                self.errorLabel.isHidden = false
+            } else {
+                self.commits = commits
+                self.errorLabel.isHidden = true
+                self.tableView.reloadData()
+            }
         }
     }
 }
