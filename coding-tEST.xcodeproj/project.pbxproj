@@ -19,6 +19,7 @@
 		4748CEC923D5DD0A003601DB /* MyGitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CEC823D5DD0A003601DB /* MyGitHub.swift */; };
 		4748CECB23D5E1EC003601DB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CECA23D5E1EC003601DB /* API.swift */; };
 		4748CECD23D5E350003601DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CECC23D5E350003601DB /* Constants.swift */; };
+		4748CED023D5F59B003601DB /* CommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CECF23D5F59B003601DB /* CommitCell.swift */; };
 		6DAEDF9F3562435687F65E5F /* Pods_coding_tEST.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD635FD77B44BD5972EB3AC /* Pods_coding_tEST.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		4748CEC823D5DD0A003601DB /* MyGitHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGitHub.swift; sourceTree = "<group>"; };
 		4748CECA23D5E1EC003601DB /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4748CECC23D5E350003601DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4748CECF23D5F59B003601DB /* CommitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCell.swift; sourceTree = "<group>"; };
 		7B350A2E912B8A51353DD40A /* Pods-coding-tEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coding-tEST.release.xcconfig"; path = "Target Support Files/Pods-coding-tEST/Pods-coding-tEST.release.xcconfig"; sourceTree = "<group>"; };
 		ACD635FD77B44BD5972EB3AC /* Pods_coding_tEST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coding_tEST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07A8AB4C68CA87E26463A24 /* Pods-coding-tEST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coding-tEST.debug.xcconfig"; path = "Target Support Files/Pods-coding-tEST/Pods-coding-tEST.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		4717C2F123D5B7F500C72D5E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4748CECE23D5F57A003601DB /* Cell */,
 				4717C2DE23D5B62800C72D5E /* ViewController.swift */,
 			);
 			path = Controller;
@@ -156,6 +159,14 @@
 				4717C2F823D5D6F100C72D5E /* github.graphql */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		4748CECE23D5F57A003601DB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4748CECF23D5F59B003601DB /* CommitCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E435162AB6263C377E830387 /* Frameworks */ = {
@@ -308,6 +319,7 @@
 				4717C2DB23D5B62800C72D5E /* AppDelegate.swift in Sources */,
 				4748CEC923D5DD0A003601DB /* MyGitHub.swift in Sources */,
 				4717C2DD23D5B62800C72D5E /* SceneDelegate.swift in Sources */,
+				4748CED023D5F59B003601DB /* CommitCell.swift in Sources */,
 				4748CECB23D5E1EC003601DB /* API.swift in Sources */,
 				4748CECD23D5E350003601DB /* Constants.swift in Sources */,
 			);
