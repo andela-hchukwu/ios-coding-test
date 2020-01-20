@@ -30,12 +30,16 @@ class MyGitHub {
             
             switch result {
             case .success(let graphQLResult):
-                print("username: \(graphQLResult.data?.user?.name ?? "no name")")
-                print("email: \(graphQLResult.data?.user?.email ?? "no email")")
+                print("username: \(graphQLResult.data?.user)")
+//                print("email: \(graphQLResult.data?.user?.email ?? "no email")")
             case .failure(let error):
-                print(error)
+                print("error]]=-\(error.localizedDescription)")
             }
             
         }
     }
+    
+//    func getLatestCommits() {
+//        apollo.fetch(query: <#T##GraphQLQuery#>)
+//    }
 }
