@@ -22,8 +22,6 @@ repository(name: "rails", owner: "rails") {
               message
               author {
                 name
-                email
-                date
               }
             }
           }
