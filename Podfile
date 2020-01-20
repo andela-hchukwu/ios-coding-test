@@ -6,6 +6,6 @@ target 'coding-tEST' do
   use_frameworks!
 
   # Pods for coding-tEST
-  pod 'Apollo', '0.7'
+  pod 'Apollo'
 
 end

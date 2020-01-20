@@ -14,6 +14,11 @@
 		4717C2E423D5B62900C72D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4717C2E323D5B62900C72D5E /* Assets.xcassets */; };
 		4717C2E723D5B62900C72D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4717C2E523D5B62900C72D5E /* LaunchScreen.storyboard */; };
 		4717C2F723D5D12C00C72D5E /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 4717C2F623D5D12C00C72D5E /* schema.json */; };
+		4717C2F923D5D6F100C72D5E /* github.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 4717C2F823D5D6F100C72D5E /* github.graphql */; };
+		4748CEC523D5DC1F003601DB /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4748CEC423D5DC1F003601DB /* Apollo.framework */; };
+		4748CEC923D5DD0A003601DB /* MyGitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CEC823D5DD0A003601DB /* MyGitHub.swift */; };
+		4748CECB23D5E1EC003601DB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CECA23D5E1EC003601DB /* API.swift */; };
+		4748CECD23D5E350003601DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CECC23D5E350003601DB /* Constants.swift */; };
 		6DAEDF9F3562435687F65E5F /* Pods_coding_tEST.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD635FD77B44BD5972EB3AC /* Pods_coding_tEST.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +32,12 @@
 		4717C2E623D5B62900C72D5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4717C2E823D5B62900C72D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4717C2F623D5D12C00C72D5E /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		4717C2F823D5D6F100C72D5E /* github.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = github.graphql; sourceTree = "<group>"; };
+		4748CEC023D5DBA3003601DB /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4748CEC423D5DC1F003601DB /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4748CEC823D5DD0A003601DB /* MyGitHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGitHub.swift; sourceTree = "<group>"; };
+		4748CECA23D5E1EC003601DB /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4748CECC23D5E350003601DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7B350A2E912B8A51353DD40A /* Pods-coding-tEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coding-tEST.release.xcconfig"; path = "Target Support Files/Pods-coding-tEST/Pods-coding-tEST.release.xcconfig"; sourceTree = "<group>"; };
 		ACD635FD77B44BD5972EB3AC /* Pods_coding_tEST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coding_tEST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07A8AB4C68CA87E26463A24 /* Pods-coding-tEST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coding-tEST.debug.xcconfig"; path = "Target Support Files/Pods-coding-tEST/Pods-coding-tEST.debug.xcconfig"; sourceTree = "<group>"; };
@@ -38,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DAEDF9F3562435687F65E5F /* Pods_coding_tEST.framework in Frameworks */,
+				4748CEC523D5DC1F003601DB /* Apollo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +109,7 @@
 			children = (
 				4717C2E323D5B62900C72D5E /* Assets.xcassets */,
 				4717C2E523D5B62900C72D5E /* LaunchScreen.storyboard */,
+				4748CECC23D5E350003601DB /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -122,6 +135,7 @@
 		4717C2F223D5B80300C72D5E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4748CEC823D5DD0A003601DB /* MyGitHub.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +143,7 @@
 		4717C2F423D5CAEF00C72D5E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				4748CECA23D5E1EC003601DB /* API.swift */,
 				4717C2F523D5CB0D00C72D5E /* GraphQL */,
 			);
 			path = Service;
@@ -138,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				4717C2F623D5D12C00C72D5E /* schema.json */,
+				4717C2F823D5D6F100C72D5E /* github.graphql */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -145,6 +161,8 @@
 		E435162AB6263C377E830387 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4748CEC423D5DC1F003601DB /* Apollo.framework */,
+				4748CEC023D5DBA3003601DB /* Apollo.framework */,
 				ACD635FD77B44BD5972EB3AC /* Pods_coding_tEST.framework */,
 			);
 			name = Frameworks;
@@ -212,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4717C2F723D5D12C00C72D5E /* schema.json in Resources */,
+				4717C2F923D5D6F100C72D5E /* github.graphql in Resources */,
 				4717C2E723D5B62900C72D5E /* LaunchScreen.storyboard in Resources */,
 				4717C2E423D5B62900C72D5E /* Assets.xcassets in Resources */,
 				4717C2E223D5B62800C72D5E /* Main.storyboard in Resources */,
@@ -259,7 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#exit 0;\n\nAPOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n#echo \"Apollo Codegen Version: \"\n#echo `/usr/local/bin/apollo-codegen --version`\n#/usr/local/bin/apollo-codegen generate \n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name 'github.graphql') --schema Source/Service/GraphQL/schema.json --output GraphQLAPI.swift --passthrough-custom-scalars\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#exit 0;\nAPOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n#echo \"Apollo Codegen Version: \"\n#echo `/usr/local/bin/apollo-codegen --version`\n#/usr/local/bin/apollo-codegen generate\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"Source/Service/GraphQL/schema.json\" API.swift\n#$APOLLO_FRAMEWORK_PATH/Versions/Current/Resources/check-and-run-apollo-codegen.sh generate $(find . -name 'github.graphql') --schema Source/Service/GraphQL/schema.json --output GraphQLAPI.swift --passthrough-custom-scalars\n";
 		};
 		63F44A586E452B3870151B35 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -287,7 +306,10 @@
 			files = (
 				4717C2DF23D5B62800C72D5E /* ViewController.swift in Sources */,
 				4717C2DB23D5B62800C72D5E /* AppDelegate.swift in Sources */,
+				4748CEC923D5DD0A003601DB /* MyGitHub.swift in Sources */,
 				4717C2DD23D5B62800C72D5E /* SceneDelegate.swift in Sources */,
+				4748CECB23D5E1EC003601DB /* API.swift in Sources */,
+				4748CECD23D5E350003601DB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
