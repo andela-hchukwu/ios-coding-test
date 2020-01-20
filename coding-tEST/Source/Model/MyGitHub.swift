@@ -9,6 +9,12 @@
 import UIKit
 import Apollo
 
+struct CommitsByAuthor {
+    var username: String
+    var commitNumber: String
+    var commitMessage: String
+}
+
 class MyGitHub {
     
     static let shared = MyGitHub()
@@ -39,7 +45,19 @@ class MyGitHub {
         }
     }
     
-//    func getLatestCommits() {
-//        apollo.fetch(query: <#T##GraphQLQuery#>)
-//    }
+    func getLatestCommits(completion: @escaping ([CommitsByAuthor]) -> ()) {
+        apollo.fetch(query: GetLatestCommitsQuery()) { result in
+            
+            switch result {
+            case .success(let graphQLResult):
+                print(graphQLResult.data)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func createAlerts(commit: GetLatestCommitsQuery.Data.Repository.Ref.Target.AsCommit) /*-> CommitsByAuthor?*/ {
+//        return CommitsByAuthor(username: commit., commitNumber: <#T##String#>, commitMessage: <#T##String#>)
+    }
 }
