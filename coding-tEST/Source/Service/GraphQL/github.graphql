@@ -1,0 +1,6 @@
+query GetUserQL {
+    user(login: "andela-hchukwu") {
+        name
+        email
+    }
+}
