@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var commits = [String]()
+    var commits = [CommitsByAuthor]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         MyGitHub.shared.getGithubUser()
+        MyGitHub.shared.getLatestCommits { commits in
+            self.commits = commits
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -33,7 +37,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "commitCell") as? CommitCell else { return UITableViewCell() }
         
         let commit = commits[indexPath.row]
-        
+        cell.userNameLabel.text = commit.username
+        cell.commitNumberLabel.text = commit.commitNumber
+        cell.commitMessageLabel.text = commit.commitMessage
         
         return cell
     }

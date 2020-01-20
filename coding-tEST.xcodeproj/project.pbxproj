@@ -17,9 +17,9 @@
 		4717C2F923D5D6F100C72D5E /* github.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 4717C2F823D5D6F100C72D5E /* github.graphql */; };
 		4748CEC523D5DC1F003601DB /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4748CEC423D5DC1F003601DB /* Apollo.framework */; };
 		4748CEC923D5DD0A003601DB /* MyGitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CEC823D5DD0A003601DB /* MyGitHub.swift */; };
-		4748CECB23D5E1EC003601DB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CECA23D5E1EC003601DB /* API.swift */; };
 		4748CECD23D5E350003601DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CECC23D5E350003601DB /* Constants.swift */; };
 		4748CED023D5F59B003601DB /* CommitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CECF23D5F59B003601DB /* CommitCell.swift */; };
+		4748CED223D5F807003601DB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748CED123D5F807003601DB /* API.swift */; };
 		6DAEDF9F3562435687F65E5F /* Pods_coding_tEST.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD635FD77B44BD5972EB3AC /* Pods_coding_tEST.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +37,9 @@
 		4748CEC023D5DBA3003601DB /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4748CEC423D5DC1F003601DB /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4748CEC823D5DD0A003601DB /* MyGitHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGitHub.swift; sourceTree = "<group>"; };
-		4748CECA23D5E1EC003601DB /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4748CECC23D5E350003601DB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4748CECF23D5F59B003601DB /* CommitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCell.swift; sourceTree = "<group>"; };
+		4748CED123D5F807003601DB /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7B350A2E912B8A51353DD40A /* Pods-coding-tEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coding-tEST.release.xcconfig"; path = "Target Support Files/Pods-coding-tEST/Pods-coding-tEST.release.xcconfig"; sourceTree = "<group>"; };
 		ACD635FD77B44BD5972EB3AC /* Pods_coding_tEST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_coding_tEST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07A8AB4C68CA87E26463A24 /* Pods-coding-tEST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coding-tEST.debug.xcconfig"; path = "Target Support Files/Pods-coding-tEST/Pods-coding-tEST.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +88,7 @@
 		4717C2D923D5B62800C72D5E /* coding-tEST */ = {
 			isa = PBXGroup;
 			children = (
+				4748CED123D5F807003601DB /* API.swift */,
 				4717C2F023D5B7D900C72D5E /* Source */,
 				4717C2EF23D5B7A800C72D5E /* Resources */,
 				4717C2EE23D5B78100C72D5E /* SupportingFiles */,
@@ -146,7 +147,6 @@
 		4717C2F423D5CAEF00C72D5E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4748CECA23D5E1EC003601DB /* API.swift */,
 				4717C2F523D5CB0D00C72D5E /* GraphQL */,
 			);
 			path = Service;
@@ -320,8 +320,8 @@
 				4748CEC923D5DD0A003601DB /* MyGitHub.swift in Sources */,
 				4717C2DD23D5B62800C72D5E /* SceneDelegate.swift in Sources */,
 				4748CED023D5F59B003601DB /* CommitCell.swift in Sources */,
-				4748CECB23D5E1EC003601DB /* API.swift in Sources */,
 				4748CECD23D5E350003601DB /* Constants.swift in Sources */,
+				4748CED223D5F807003601DB /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
