@@ -56,15 +56,55 @@
 		4717C2D923D5B62800C72D5E /* coding-tEST */ = {
 			isa = PBXGroup;
 			children = (
-				4717C2DA23D5B62800C72D5E /* AppDelegate.swift */,
-				4717C2DC23D5B62800C72D5E /* SceneDelegate.swift */,
-				4717C2DE23D5B62800C72D5E /* ViewController.swift */,
+				4717C2F023D5B7D900C72D5E /* Source */,
+				4717C2EF23D5B7A800C72D5E /* Resources */,
+				4717C2EE23D5B78100C72D5E /* SupportingFiles */,
 				4717C2E023D5B62800C72D5E /* Main.storyboard */,
-				4717C2E323D5B62900C72D5E /* Assets.xcassets */,
-				4717C2E523D5B62900C72D5E /* LaunchScreen.storyboard */,
 				4717C2E823D5B62900C72D5E /* Info.plist */,
 			);
 			path = "coding-tEST";
+			sourceTree = "<group>";
+		};
+		4717C2EE23D5B78100C72D5E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4717C2DA23D5B62800C72D5E /* AppDelegate.swift */,
+				4717C2DC23D5B62800C72D5E /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		4717C2EF23D5B7A800C72D5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4717C2E323D5B62900C72D5E /* Assets.xcassets */,
+				4717C2E523D5B62900C72D5E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4717C2F023D5B7D900C72D5E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4717C2F223D5B80300C72D5E /* Model */,
+				4717C2F123D5B7F500C72D5E /* Controller */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4717C2F123D5B7F500C72D5E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4717C2DE23D5B62800C72D5E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4717C2F223D5B80300C72D5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JPNBUYVTC7;
 				INFOPLIST_FILE = "coding-tEST/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JPNBUYVTC7;
 				INFOPLIST_FILE = "coding-tEST/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
