@@ -24,3 +24,7 @@ Please **fork** this repository and commit all your changes to it. When you're d
 	- Create a TableView that displays the recent commits by author in a view. 
 	- [Click here](example.jpg) for a screenshot mock up of what the final product should look like
 4. Commit and Push your code to your forked repository
+
+## Constraints
+- After I pushed to github my github acces token credentials were revoked because it was meant to be private so a 401 was returned.
+- My tableview need to return a dynamic height this was not done due to time constraint.
